@@ -1,6 +1,6 @@
 # Brawler Template - Claude Context Document
 
-> **Last Updated**: 2026-02-07
+> **Last Updated**: 2026-02-15
 > **Purpose**: Context restoration for Claude Code sessions
 > **Project**: SCAD Applied Programming - Brawler Template
 
@@ -8,7 +8,7 @@
 
 ## Quick Summary
 
-This is a **Smash Bros-style 2-player arena fighter template** for teaching game development. Students extend the template to create their own fighters. The template uses a **scaffolded approach** where core systems are complete but GameManager and UI need to be "wired up" by students following lesson guides.
+This is a **Smash Bros-style 2-player arena fighter template** for teaching game development. Teams of 4 students fork the template and build their own brawler. The template provides complete combat, input, and arena systems. Five scaffold scripts (GameManager, 3 UI scripts, Platform) have TODO comments for students to complete. Students design their own game rules, create fighters by extending `FighterBase`, and organize their team however they choose.
 
 ---
 
@@ -30,10 +30,12 @@ This is a **Smash Bros-style 2-player arena fighter template** for teaching game
 
 ---
 
-## Game Design Decisions
+## Game Design Decisions (Template Defaults)
 
-| Decision | Choice | Rationale |
-|----------|--------|-----------|
+These are the template's starting defaults. Teams may modify or replace them via their DESIGN_DOC.md.
+
+| Decision | Default | Rationale |
+|----------|---------|-----------|
 | Health System | Health bars with knockback vulnerability | Easier to teach than percentage-based |
 | Knockback Formula | `knockback = base * (2 - healthPercent)` | 1x at full health, 2x at zero health |
 | Win Condition | Ring-out via blast zones | Avoids violence, promotes physics play |
@@ -46,18 +48,13 @@ This is a **Smash Bros-style 2-player arena fighter template** for teaching game
 
 ## Team Structure
 
-Each game is built by a **team of 4**:
+Each game is built by a **team of 4**. Teams self-organize with no prescribed roles — they decide who works on what. Students fork the template on GitHub, with the tech lead creating the fork and inviting teammates as collaborators.
 
-```
-1 Team = 1 Game
-├── Programmer 1 + Artist 1 → Fighter 1 (works in Fighter1/ folder)
-└── Programmer 2 + Artist 2 → Fighter 2 (works in Fighter2/ folder)
-```
-
-- Shared repository
-- Work split decided by team on night one
+- Shared repository (forked from upstream template)
+- Work split decided by the team
 - Artists work directly in Unity (prefabs, animators)
 - Students can bring Platformer code or start fresh
+- Fighter1/ and Fighter2/ are organizational folders for the two fighter characters, not team assignments
 
 ---
 
@@ -65,7 +62,7 @@ Each game is built by a **team of 4**:
 
 ```
 Assets/_Project/
-├── _Shared/                    ← Shared systems (team manages together)
+├── _Shared/                    Shared systems (team manages together)
 │   ├── Scripts/
 │   │   ├── Core/
 │   │   │   ├── ServiceLocator.cs      ✓ Complete
@@ -93,7 +90,7 @@ Assets/_Project/
 │   ├── Prefabs/UI/
 │   └── Scenes/                        (DevArena.unity goes here)
 │
-├── _FighterBase/               ← Reference implementation (DO NOT MODIFY)
+├── _FighterBase/               Reference implementation (DO NOT MODIFY)
 │   ├── Scripts/
 │   │   ├── FighterBase.cs             ✓ Complete (abstract class)
 │   │   ├── FighterHealth.cs           ✓ Complete
@@ -107,28 +104,27 @@ Assets/_Project/
 │   │   └── ExampleAttacks/            (AttackData assets go here)
 │   └── Prefabs/                       (ExampleFighter.prefab goes here)
 │
-├── Fighter1/                   ← Programmer 1 + Artist 1 ONLY
+├── Fighter1/                   First fighter character
 │   ├── Scripts/
 │   ├── Art/Sprites/
 │   ├── Art/Animations/
 │   ├── Configs/Attacks/
 │   └── Prefabs/
 │
-├── Fighter2/                   ← Programmer 2 + Artist 2 ONLY
+├── Fighter2/                   Second fighter character
 │   ├── Scripts/
 │   ├── Art/Sprites/
 │   ├── Art/Animations/
 │   ├── Configs/Attacks/
 │   └── Prefabs/
 │
-└── Lessons/
-    ├── 01_ProjectOverview.md
-    ├── 02_WiringGameManager.md
-    ├── 03_WiringUI.md
-    ├── 04_CreatingYourFighter.md
-    ├── 05_SettingUpAttacks.md
-    ├── 06_ArtistGuide_Prefabs.md
-    └── 07_ArtistGuide_Animators.md
+└── Guides/
+    ├── 01_GettingStarted.md
+    ├── 02_MatchFlowAndArena.md
+    ├── 03_UISystem.md
+    ├── 04_FighterArchitecture.md
+    ├── 05_CombatSystem.md
+    └── 06_ArtReference.md
 ```
 
 ---
@@ -224,12 +220,18 @@ public class AttackData : ScriptableObject
 
 ## Scaffold Pattern
 
-Scaffolded files contain TODO comments pointing to lessons:
+Scaffolded files contain TODO comments. Note: the TODO comments reference old guide names ("Lesson 02", "Lesson 03") which map to current guides:
+
+| TODO References | Current Guide |
+|----------------|---------------|
+| "Lesson 02" / "Wiring GameManager" | Guide 02: Match Flow and Arena |
+| "Lesson 03" / "Wiring UI" | Guide 03: UI System |
 
 ```csharp
 public class GameManager : MonoBehaviour
 {
     // TODO: See Lesson 02_WiringGameManager.md
+    // (Now: Guide 02_MatchFlowAndArena.md)
 
     // STEP 1: Subscribe to GameEvents.OnFighterKO in OnEnable
     // STEP 2: Position fighters at spawn points in StartRound
@@ -255,10 +257,10 @@ public class GameManager : MonoBehaviour
 | FighterMovement | ✓ Complete | Use OR replace with own |
 | AttackController | ✓ Complete | Use OR replace with own |
 | PlayerInputHandler | ✓ Complete | Use as-is |
-| **GameManager** | ⚠ Scaffold | Wire up (Lesson 02) |
-| **HealthBarUI** | ⚠ Scaffold | Wire up (Lesson 03) |
-| **RoundDisplayUI** | ⚠ Scaffold | Wire up (Lesson 03) |
-| **MatchUI** | ⚠ Scaffold | Wire up (Lesson 03) |
+| **GameManager** | ⚠ Scaffold | Wire up (Guide 02) |
+| **HealthBarUI** | ⚠ Scaffold | Wire up (Guide 03) |
+| **RoundDisplayUI** | ⚠ Scaffold | Wire up (Guide 03) |
+| **MatchUI** | ⚠ Scaffold | Wire up (Guide 03) |
 | **Platform** | ⚠ Scaffold | Complete drop-through |
 
 ---
@@ -288,11 +290,8 @@ These require Unity Editor (can't be created as text files):
 
 - **Branch**: main
 - **Remote**: origin (GitHub)
-- **Last Push**: 2026-02-07
-- **Commits**:
-  1. Initial commit
-  2. Add Brawler Template scaffolding (24 scripts, 7 lessons, input actions)
-  3. Add README placeholders for config directories
+- **Last Push**: 2026-02-15
+- **Students fork the repo** — upstream stays clean as template
 
 ---
 
@@ -345,8 +344,9 @@ rb.linearVelocity = new Vector2(horizontalSpeed, rb.linearVelocity.y);
 1. **Unity 6 API Changes**: Uses `rb.linearVelocity` not `rb.velocity`
 2. **Input System**: New Input System only, no legacy Input.GetKey
 3. **No Time Estimates**: Never give timeline estimates to user
-4. **Scaffold Pattern**: TODOs reference lesson files, not inline instructions
-5. **Conflict Prevention**: Fighter1/ and Fighter2/ are strictly separated
+4. **Scaffold Pattern**: TODOs in C# reference old guide names ("Lesson 02/03") — see mapping table above
+5. **Team Philosophy**: No prescribed roles. Teams self-organize. Fighter1/ and Fighter2/ are organizational convention, not team assignments.
+6. **Game Rules**: Template defaults are starting points. Teams customize via DESIGN_DOC.md.
 
 ---
 
@@ -355,6 +355,7 @@ rb.linearVelocity = new Vector2(horizontalSpeed, rb.linearVelocity.y);
 - Prefers concise responses
 - Teaching at SCAD (Savannah College of Art and Design)
 - Applied Programming class
-- Teams of 4 students
-- Values clear folder separation for merge conflict prevention
+- Teams of 4 students, self-organized (no prescribed roles)
+- Values clear folder organization for project management
 - Wants students to be able to bring Platformer code or start fresh
+- Wants students to design their own game rules, not just wire up prescriptive templates
