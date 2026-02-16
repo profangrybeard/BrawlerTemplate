@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dfb68a029b690fa4898d84043b1019c9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Animations/demo07_pie.anim
+  uploadId: 679901

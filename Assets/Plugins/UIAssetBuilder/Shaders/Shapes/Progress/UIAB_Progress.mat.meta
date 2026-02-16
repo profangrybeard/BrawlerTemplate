@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 23678e30987252846a6d238c99bb35c0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/Shapes/Progress/UIAB_Progress.mat
+  uploadId: 679901

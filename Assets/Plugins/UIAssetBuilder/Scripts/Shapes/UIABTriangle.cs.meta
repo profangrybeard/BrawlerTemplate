@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 9f6be4cb5ce1a2f4684b6c9af47f4eec
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_Material: {fileID: 2100000, guid: 765fc3431d74f544a8e7a7071a4fac7a, type: 2}
+  - renderTexture: {instanceID: 0}
+  - shader: {fileID: 7200000, guid: e5b64f3b9e5640e43b57899a95129de1, type: 3}
+  - shapeMaterial: {fileID: 2100000, guid: 765fc3431d74f544a8e7a7071a4fac7a, type: 2}
+  - stylePreset: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Scripts/Shapes/UIABTriangle.cs
+  uploadId: 679901

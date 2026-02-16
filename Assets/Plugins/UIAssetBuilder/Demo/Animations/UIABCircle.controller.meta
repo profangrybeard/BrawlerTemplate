@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8dabb52076316e041b0a3f64d3d2586d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Animations/UIABCircle.controller
+  uploadId: 679901

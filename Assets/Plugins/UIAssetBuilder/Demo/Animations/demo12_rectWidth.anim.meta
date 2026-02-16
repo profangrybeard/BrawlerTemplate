@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 82e42a7b98b2c064da135d2b25af9512
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Animations/demo12_rectWidth.anim
+  uploadId: 679901

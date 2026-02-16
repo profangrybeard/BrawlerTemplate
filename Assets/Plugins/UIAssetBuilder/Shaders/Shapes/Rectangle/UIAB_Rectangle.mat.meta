@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 16b40b4387c38f045b42bea509eb7508
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/Shapes/Rectangle/UIAB_Rectangle.mat
+  uploadId: 679901

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 32535f9b2c04ad04a903a37af9c01919
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Scripts/Utils/Common/UIABEffects.cs
+  uploadId: 679901

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1a042ad58f836964d930a92627397eb6
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/Shapes/Polygon.cginc
+  uploadId: 679901

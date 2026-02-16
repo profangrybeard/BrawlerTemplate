@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6f0e143002abfd84895da4f27339285e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/Shapes/Circle/UIAB_Circle.mat
+  uploadId: 679901

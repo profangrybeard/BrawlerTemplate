@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b605ddcba803f0d40856db9bba19848d
+ComputeShaderImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/Shapes/Rectangle/RectangleCShader.compute
+  uploadId: 679901

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4d0b2ab54f8a2354cad078e317ef9d32
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/Shapes/More/MoreVFShader.shader
+  uploadId: 679901

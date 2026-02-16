@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 22626ff3bd76c974cb42a56254fd8a8c
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/Utils/LineUtils.cginc
+  uploadId: 679901

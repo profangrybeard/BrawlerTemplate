@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 465c4a692b62e8e4cbeb125f375ae998
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/Shapes/Triangle.cginc
+  uploadId: 679901

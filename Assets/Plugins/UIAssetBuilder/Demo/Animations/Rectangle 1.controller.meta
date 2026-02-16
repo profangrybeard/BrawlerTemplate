@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 61a6189a278b49045b7cccaa3cd5eda4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Animations/Rectangle 1.controller
+  uploadId: 679901

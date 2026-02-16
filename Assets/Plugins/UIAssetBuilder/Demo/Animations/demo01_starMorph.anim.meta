@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cc33e3342ff70f941b9a772ea3087ce8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Animations/demo01_starMorph.anim
+  uploadId: 679901

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 158c4a9a46a51b64da0df62315ef136e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_Material: {fileID: 2100000, guid: 8c7d20c19daf64443a0fab48ba69128c, type: 2}
+  - renderTexture: {instanceID: 0}
+  - shader: {fileID: 7200000, guid: df61c4b357f43ab4fba7d965c5702d59, type: 3}
+  - shapeMaterial: {fileID: 2100000, guid: 8c7d20c19daf64443a0fab48ba69128c, type: 2}
+  - stylePreset: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Scripts/Shapes/UIABPolygon.cs
+  uploadId: 679901

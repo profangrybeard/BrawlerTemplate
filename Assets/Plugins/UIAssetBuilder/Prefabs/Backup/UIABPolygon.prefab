@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6746633862589346122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8254020320113640971}
+  - component: {fileID: 477232815801209103}
+  - component: {fileID: 4557509767836075406}
+  m_Layer: 5
+  m_Name: UIABPolygon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8254020320113640971
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6746633862589346122}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &477232815801209103
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6746633862589346122}
+  m_CullTransparentMesh: 1
+--- !u!114 &4557509767836075406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6746633862589346122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158c4a9a46a51b64da0df62315ef136e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  resolution: 1
+  useCustomDimensions: 0
+  dimension: {x: 100, y: 100}
+  renderTexture: {fileID: 0}
+  useComputeShader: 0
+  shader: {fileID: 7200000, guid: df61c4b357f43ab4fba7d965c5702d59, type: 3}
+  shapeMaterial: {fileID: 2100000, guid: 8c7d20c19daf64443a0fab48ba69128c, type: 2}
+  sharpness: 0
+  fillColor:
+    fillStyle: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorEnd: {r: 0, g: 0, b: 0, a: 1}
+    colorMid: {r: 1, g: 0, b: 0, a: 1}
+    gradientStart: {x: -0.5, y: 0}
+    gradientEnd: {x: 0.5, y: 0}
+    gradientMid: 0.5
+  outline:
+    useOutline: 0
+    color:
+      fillStyle: 0
+      color: {r: 0, g: 0, b: 0, a: 1}
+      colorEnd: {r: 0, g: 0, b: 0, a: 0}
+      colorMid: {r: 0, g: 0, b: 0, a: 0}
+      gradientStart: {x: 0, y: 0}
+      gradientEnd: {x: 0, y: 0}
+      gradientMid: 0
+    orientation: 0
+    edgeType: 0
+    outlineStyle: 0
+    thickness: 4
+    offset: 0
+    dashLength: 8
+    gapLength: 4
+    dashOffset: 0
+  effects:
+    useEffects: 0
+    innerShadow:
+      useEffect: 0
+      color: {r: 0, g: 0, b: 0, a: 0.5}
+      distance:
+        useAngle: 0
+        offset: {x: 5, y: -5}
+        angle: -45
+        distance: 5
+      blur: 0
+      spread: 0
+      showEffectSection: 0
+    dropShadow:
+      useEffect: 0
+      color: {r: 0, g: 0, b: 0, a: 0.5}
+      distance:
+        useAngle: 0
+        offset: {x: 5, y: -5}
+        angle: -45
+        distance: 5
+      blur: 0
+      spread: 0
+      showEffectSection: 0
+    innerGlow:
+      useEffect: 0
+      color: {r: 1, g: 1, b: 1, a: 1}
+      isLinear: 1
+      isCenter: 0
+      exponentialDecrease: 2
+      choke: 0
+      size: 5
+      showEffectSection: 0
+    outerGlow:
+      useEffect: 0
+      color: {r: 1, g: 1, b: 1, a: 1}
+      isLinear: 1
+      exponentialDecrease: 2
+      choke: 0
+      size: 5
+      showEffectSection: 0
+  extraSettings:
+    centerOffset: {x: 0, y: 0}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  stylePreset: {fileID: 0}
+  sides: 5
+  angle: 0
+  roundness: 0

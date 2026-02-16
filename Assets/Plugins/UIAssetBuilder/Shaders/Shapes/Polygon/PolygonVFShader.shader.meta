@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 64ae56a1eb19e9e4886cc18d88c0d566
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/Shapes/Polygon/PolygonVFShader.shader
+  uploadId: 679901

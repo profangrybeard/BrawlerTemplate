@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e497ad55bd4b4184fb193bf62f5b01a4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Prefabs/UIABMore.prefab
+  uploadId: 679901

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: df01361ac78078a409ce9b53125e3454
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Animations/demo06_movingshadow.anim
+  uploadId: 679901

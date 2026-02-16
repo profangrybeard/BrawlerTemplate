@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 943db54908e63404da9f06e17c28c767
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/Common/ShaderTextureCommon.cginc
+  uploadId: 679901

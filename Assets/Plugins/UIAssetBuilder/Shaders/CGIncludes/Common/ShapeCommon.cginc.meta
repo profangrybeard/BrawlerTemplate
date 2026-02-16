@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4fb9dfd9a749c0e4fa61eada1145b732
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/Common/ShapeCommon.cginc
+  uploadId: 679901

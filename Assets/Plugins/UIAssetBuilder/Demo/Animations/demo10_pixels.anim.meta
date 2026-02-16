@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 24c12f9c1ef3e0149a2f378cb0fcd668
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Animations/demo10_pixels.anim
+  uploadId: 679901

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a73d8d3b07ceeee4c8ce94ddf0dd1ca5
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/Utils/DebugUtils.cginc
+  uploadId: 679901

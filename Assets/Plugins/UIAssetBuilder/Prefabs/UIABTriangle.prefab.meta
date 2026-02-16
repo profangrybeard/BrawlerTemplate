@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6704b2dfe05c78746b83eca111393872
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Prefabs/UIABTriangle.prefab
+  uploadId: 679901

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8c00f5490deafdf41964dc8822fa947c
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/Utils/PointUtils.cginc
+  uploadId: 679901

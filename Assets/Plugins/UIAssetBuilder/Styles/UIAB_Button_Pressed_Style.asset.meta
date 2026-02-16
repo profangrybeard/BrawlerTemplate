@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: be07bd0a8501f794897c0530a26fef8a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Styles/UIAB_Button_Pressed_Style.asset
+  uploadId: 679901

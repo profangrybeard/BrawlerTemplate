@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 49f5681834982954faedb80e7d0e3b36
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_Material: {fileID: 2100000, guid: 28378fd1d4e0d9545928d4d801c8ebc0, type: 2}
+  - renderTexture: {instanceID: 0}
+  - shader: {fileID: 7200000, guid: 3194af7ba564d7c41b05d11d01749613, type: 3}
+  - shapeMaterial: {fileID: 2100000, guid: 28378fd1d4e0d9545928d4d801c8ebc0, type: 2}
+  - stylePreset: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Scripts/Shapes/UIABMore.cs
+  uploadId: 679901

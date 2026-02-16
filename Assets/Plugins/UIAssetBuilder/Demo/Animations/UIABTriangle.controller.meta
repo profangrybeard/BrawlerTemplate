@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 97bd5d0abc7f53c4280f8cd0b7c70d0a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Animations/UIABTriangle.controller
+  uploadId: 679901

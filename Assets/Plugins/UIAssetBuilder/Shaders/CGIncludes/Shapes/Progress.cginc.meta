@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 68e8a2271692cce42abc592a86bcbab1
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/Shapes/Progress.cginc
+  uploadId: 679901

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: a67d09886833f404e859d102b7c7dfa3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_Material: {fileID: 2100000, guid: 23678e30987252846a6d238c99bb35c0, type: 2}
+  - renderTexture: {instanceID: 0}
+  - shader: {fileID: 7200000, guid: 27c82d0ae9eeb444bb0e64688e64faaf, type: 3}
+  - shapeMaterial: {fileID: 2100000, guid: 23678e30987252846a6d238c99bb35c0, type: 2}
+  - stylePreset: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Scripts/Shapes/UIABProgress.cs
+  uploadId: 679901

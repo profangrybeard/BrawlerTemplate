@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: a966b2026a5acf641a6133d6ffce4cc0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_Material: {fileID: 2100000, guid: 6f0e143002abfd84895da4f27339285e, type: 2}
+  - renderTexture: {instanceID: 0}
+  - shader: {fileID: 7200000, guid: 3b6b80c276e48f14c99b6f05d5962110, type: 3}
+  - shapeMaterial: {fileID: 2100000, guid: 6f0e143002abfd84895da4f27339285e, type: 2}
+  - stylePreset: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Scripts/Shapes/UIABCircle.cs
+  uploadId: 679901

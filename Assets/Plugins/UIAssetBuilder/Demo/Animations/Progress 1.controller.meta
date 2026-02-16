@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 57dd758fd9ecf144d8d5661b3c75db83
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Animations/Progress 1.controller
+  uploadId: 679901

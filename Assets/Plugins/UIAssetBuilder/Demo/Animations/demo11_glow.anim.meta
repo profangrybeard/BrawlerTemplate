@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 404b5db792c5ff643bc5ab9da7a18975
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Animations/demo11_glow.anim
+  uploadId: 679901

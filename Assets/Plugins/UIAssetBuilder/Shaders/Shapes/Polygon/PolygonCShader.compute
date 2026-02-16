@@ -1,0 +1,16 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel DrawPolygon
+
+#include "/../../CGIncludes/Utils/PointUtils.cginc" 
+#include "/../../CGIncludes/Shapes/Polygon.cginc" 
+#include "/../../CGIncludes/Common/ShaderTextureCommon.cginc"
+#include "/../../CGIncludes/Common/DrawerCommon.cginc" 
+
+
+[numthreads(32, 32, 1)]
+void DrawPolygon(uint3 id : SV_DispatchThreadID)
+{
+    float2 p = pointToCenterOrigin (float2(id.x, id.y), _ResultTexture_Dimension.xy) / _Resolution;
+    p.x = abs(p.x) < 0.5 ? 1.0 : p.x; //fix for line at bottom on odd-width sized textures
+    ResultTexture[id.xy] = DrawShape(p, _Sharpness);
+}

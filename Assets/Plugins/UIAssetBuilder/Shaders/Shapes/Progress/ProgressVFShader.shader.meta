@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5a72453a8d23c6049a2bcb70dba9f306
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/Shapes/Progress/ProgressVFShader.shader
+  uploadId: 679901

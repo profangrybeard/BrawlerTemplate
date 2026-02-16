@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8c7d20c19daf64443a0fab48ba69128c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/Shapes/Polygon/UIAB_Polygon.mat
+  uploadId: 679901

@@ -1,0 +1,16 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel DrawTriangle
+
+#include "/../../CGIncludes/Utils/PointUtils.cginc" 
+#include "/../../CGIncludes/Shapes/Triangle.cginc" 
+#include "/../../CGIncludes/Common/ShaderTextureCommon.cginc"
+#include "/../../CGIncludes/Common/DrawerCommon.cginc" 
+
+
+[numthreads(32, 32, 1)]
+void DrawTriangle(uint3 id : SV_DispatchThreadID)
+{
+    float2 p = pointToCenterOrigin (float2(id.x, id.y), _ResultTexture_Dimension.xy) / _Resolution;
+
+    ResultTexture[id.xy] = DrawShape(p, _Sharpness);
+}

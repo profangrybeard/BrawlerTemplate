@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 84d11a31939877846887a5c9150288ac
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Prefabs/UIAB Logo.prefab
+  uploadId: 679901

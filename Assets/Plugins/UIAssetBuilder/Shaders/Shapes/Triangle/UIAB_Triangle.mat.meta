@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 765fc3431d74f544a8e7a7071a4fac7a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/Shapes/Triangle/UIAB_Triangle.mat
+  uploadId: 679901

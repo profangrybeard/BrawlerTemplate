@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8ab549f6c1e8d4a4dbb9d814d70cd831
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/Utils/Constants.cginc
+  uploadId: 679901

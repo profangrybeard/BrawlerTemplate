@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5d332805a4ea7d04b8fb575eab966a04
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Animations/Demo14.controller
+  uploadId: 679901

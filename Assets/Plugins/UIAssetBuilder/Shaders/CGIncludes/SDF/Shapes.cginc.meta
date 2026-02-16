@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7af011925e084794aa9c981188a4ebe0
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/SDF/Shapes.cginc
+  uploadId: 679901

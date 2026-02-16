@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07827d880f7df54fbbbe9e685525913, type: 3}
+  m_Name: UIAB_Button_Pressed_Style
+  m_EditorClassIdentifier: 
+  uniqueId: 6fa949ec-f795-4f70-bfb6-b7eb796b31d8
+  data:
+    fillColor:
+      color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
+    outline:
+      useOutline: 1
+      color:
+        color: {r: 0, g: 0, b: 0, a: 1}
+      orientation: 2
+      edgeType: 0
+      thickness: 4
+      offset: 0
+    effects:
+      useEffects: 1
+      innerShadow:
+        useEffect: 0
+        color: {r: 0, g: 0, b: 0, a: 0.5}
+        distance:
+          useAngle: 0
+          offset: {x: 5, y: -5}
+          angle: -45
+          distance: 5
+        blur: 0
+        spread: 0
+        showEffectSection: 0
+      dropShadow:
+        useEffect: 1
+        color: {r: 0, g: 0, b: 0, a: 0.5}
+        distance:
+          useAngle: 0
+          offset: {x: 0, y: 0}
+          angle: -45
+          distance: 5
+        blur: 0
+        spread: 0
+        showEffectSection: 1
+      innerGlow:
+        useEffect: 0
+        color: {r: 1, g: 1, b: 1, a: 0.5}
+        isLinear: 1
+        isCenter: 0
+        exponentialDecrease: 2
+        choke: 0.5
+        size: 5
+        showEffectSection: 0
+      outerGlow:
+        useEffect: 0
+        color: {r: 1, g: 1, b: 1, a: 0.5}
+        isLinear: 1
+        exponentialDecrease: 2
+        choke: 0.5
+        size: 5
+        showEffectSection: 0
+    extraSettings:
+      centerOffset: {x: 5, y: -5}
+      tint: {r: 1, g: 1, b: 1, a: 1}
+    corners: {x: 0, y: 0, z: 0, w: 0}

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 66156256091f1d449af2eb8be4166855
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Styles/UIAB_Outline_White.asset
+  uploadId: 679901

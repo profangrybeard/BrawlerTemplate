@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 762458fcfbb07f54699d207a93bad4fd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Prefabs/UIABPolygon.prefab
+  uploadId: 679901

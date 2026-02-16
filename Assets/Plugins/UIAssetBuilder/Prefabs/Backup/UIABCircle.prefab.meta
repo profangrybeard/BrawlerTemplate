@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4b865901eba6ff44eabaff8e06563f9e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Prefabs/Backup/UIABCircle.prefab
+  uploadId: 679901

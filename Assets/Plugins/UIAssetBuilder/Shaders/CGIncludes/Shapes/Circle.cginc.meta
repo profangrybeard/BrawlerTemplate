@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4de046f0761b14c4fba7fc7750d21ddc
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/Shapes/Circle.cginc
+  uploadId: 679901

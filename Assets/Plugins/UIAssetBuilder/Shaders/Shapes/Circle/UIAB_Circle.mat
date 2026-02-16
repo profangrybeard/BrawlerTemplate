@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UIAB_Circle
+  m_Shader: {fileID: 4800000, guid: f677ff09b611069428820a53afdde3f0, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints:
+    - _Effect_InnerGlow_Use: 0
+    - _Effect_InnerShadow_Use: 0
+    m_Floats:
+    - _ColorMask: 15
+    - _CornerType: 1
+    - _Effect_DropShadow_Use: 0
+    - _Effect_Falloff: 39.3
+    - _Effect_InnerGlow_Use: 0
+    - _Effect_InnerShadow_Choke: 0
+    - _Effect_InnerShadow_Size: 0
+    - _Effect_InnerShadow_Use: 0
+    - _Effect_OuterGlow_Use: 0
+    - _Outline_Edge: 4
+    - _Outline_Thickness: 4
+    - _Rectangle_Height: 100
+    - _Rectangle_Width: 200
+    - _Sharpness: 0
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseComputeShader: 1
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _Circle_Dimension_Type: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Debug_Vector: {r: 1, g: 1, b: 2, a: 0.5}
+    - _Dimension: {r: 2, g: 9.67, b: 0, a: 0}
+    - _Effect_Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Effect_Distance: {r: 20, g: 20, b: 0, a: 0}
+    - _Effect_DropShadow_Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Effect_DropShadow_Distance_Blur_Spread: {r: 3.9363537, g: -4.528258, b: 4, a: 0}
+    - _Effect_InnerGlow_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Effect_InnerGlow_IsCenter_Choke_Size: {r: 0, g: 0.165, b: 16, a: 0}
+    - _Effect_InnerGlow_IsLinear_IsCenter_Choke_Size: {r: 0, g: 0, b: 0.476, a: 10}
+    - _Effect_InnerShadow_Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Effect_InnerShadow_Distance: {r: 30, g: 30, b: 0, a: 0}
+    - _Effect_InnerShadow_Distance_Blur_Spread: {r: 17.552488, g: -16.36796, b: 16.8, a: 0}
+    - _Effect_InnerShadow_Distance_Choke_Size: {r: 0, g: 0, b: 0, a: 0}
+    - _Effect_OuterGlow_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Effect_OuterGlow_IsLinear_Choke_Size: {r: 0, g: 0, b: 4, a: 0}
+    - _FillColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Outline_FillColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RectangleDimension: {r: 50, g: 50, b: 0, a: 0}
+    - _Rectangle_Corners: {r: 48.04, g: 38.85, b: 0, a: 0}
+    - _ResultTexture_Dimension: {r: 223, g: 123, b: 0, a: 0}
+    - _TextureDimension: {r: 100, g: 100, b: 0, a: 0}
+    - fillColor: {r: 1, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []

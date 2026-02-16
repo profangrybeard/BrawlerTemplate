@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ed6ac6b3870d53f4387cb59a3058e952
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/Shapes/Rectangle.cginc
+  uploadId: 679901

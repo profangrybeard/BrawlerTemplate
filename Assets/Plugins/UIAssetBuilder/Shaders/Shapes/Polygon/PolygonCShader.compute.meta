@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: df61c4b357f43ab4fba7d965c5702d59
+ComputeShaderImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/Shapes/Polygon/PolygonCShader.compute
+  uploadId: 679901

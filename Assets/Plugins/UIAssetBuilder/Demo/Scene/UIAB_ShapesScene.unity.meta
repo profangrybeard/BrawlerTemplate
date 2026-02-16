@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b0e15c2bda5853044b4b13b91a6819b0
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Demo/Scene/UIAB_ShapesScene.unity
+  uploadId: 679901

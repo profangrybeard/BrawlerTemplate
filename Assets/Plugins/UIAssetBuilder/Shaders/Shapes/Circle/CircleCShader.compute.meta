@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3b6b80c276e48f14c99b6f05d5962110
+ComputeShaderImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/Shapes/Circle/CircleCShader.compute
+  uploadId: 679901

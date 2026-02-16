@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b4da566ca1107f2428606e055f318778
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Styles/UIAB_Button_Idle_Style.asset
+  uploadId: 679901

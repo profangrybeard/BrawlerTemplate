@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 28378fd1d4e0d9545928d4d801c8ebc0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/Shapes/More/UIAB_More.mat
+  uploadId: 679901

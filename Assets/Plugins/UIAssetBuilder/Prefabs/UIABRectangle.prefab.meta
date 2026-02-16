@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: eafd9e41e70ecc44695682e4613c9441
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Prefabs/UIABRectangle.prefab
+  uploadId: 679901

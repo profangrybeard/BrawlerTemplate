@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d7a46aa068f867441b09a49b52de4ebf
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Shaders/CGIncludes/SDF/Primitives.cginc
+  uploadId: 679901

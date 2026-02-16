@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3f2fe125dc66b2e43a9c32438b382678
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279886
+  packageName: UIAB - UI Asset Builder
+  packageVersion: 1.1.2.1
+  assetPath: Assets/Plugins/UIAssetBuilder/Prefabs/UIABProgress.prefab
+  uploadId: 679901
