@@ -1,6 +1,6 @@
 # Brawler Template - Claude Context Document
 
-> **Last Updated**: 2026-02-15
+> **Last Updated**: 2026-02-17
 > **Purpose**: Context restoration for Claude Code sessions
 > **Project**: SCAD Applied Programming - Brawler Template
 
@@ -9,6 +9,8 @@
 ## Quick Summary
 
 This is a **Smash Bros-style 2-player arena fighter template** for teaching game development. Teams of 4 students fork the template and build their own brawler. The template provides complete combat, input, and arena systems. Five scaffold scripts (GameManager, 3 UI scripts, Platform) have TODO comments for students to complete. Students design their own game rules, create fighters by extending `FighterBase`, and organize their team however they choose.
+
+**Session 1 workflow:** Tech lead follows `01_SceneSetup.md` to build the DevArena scene (assets, prefab, arena, singletons) while the team fills out `DESIGN_DOC.md`. Once the smoke test passes, the dev lead commits, pushes, and invites the team. Everyone clones a project that runs on first open.
 
 ---
 
@@ -119,7 +121,8 @@ Assets/_Project/
 │   └── Prefabs/
 │
 └── Guides/
-    ├── 01_GettingStarted.md
+    ├── 01_SceneSetup.md           Tech lead builds DevArena (Session 1)
+    ├── 01_GettingStarted.md       Fork, clone, project overview
     ├── 02_MatchFlowAndArena.md
     ├── 03_UISystem.md
     ├── 04_FighterArchitecture.md
@@ -265,24 +268,25 @@ public class GameManager : MonoBehaviour
 
 ---
 
-## Still Needs To Be Created In Unity
+## Scene Setup Status
 
-These require Unity Editor (can't be created as text files):
+The `01_SceneSetup.md` guide walks the tech lead through creating all Unity-side assets. After completing it, the project has:
 
-1. **ScriptableObject Assets**
-   - `_Shared/Configs/MatchConfig.asset`
-   - `_FighterBase/Configs/DefaultMovementConfig.asset`
-   - `_FighterBase/Configs/ExampleAttacks/Jab.asset`
-   - `_FighterBase/Configs/ExampleAttacks/ForwardAttack.asset`
-   - `_FighterBase/Configs/ExampleAttacks/UpAttack.asset`
-   - `_FighterBase/Configs/ExampleAttacks/DownAttack.asset`
-   - `_FighterBase/Configs/ExampleAttacks/AerialAttack.asset`
+### Created by Tech Lead (Session 1)
+- `_Shared/Scenes/DevArena.unity` — playable arena with blast zones, spawn points, ground
+- `_Shared/Configs/DefaultMatchConfig.asset` — match rules
+- `_Shared/Configs/DefaultInputConfig.asset` — input deadzone/buffering
+- `_FighterBase/Configs/DefaultMovementConfig.asset` — movement tuning
+- `_FighterBase/Configs/ExampleAttacks/ExampleJab.asset` — neutral attack
+- `_FighterBase/Configs/ExampleAttacks/ExampleForwardPunch.asset` — forward attack
+- `_FighterBase/Prefabs/ExampleFighter.prefab` — working reference fighter
+- Ground layer for physics raycasts
 
-2. **Scene**
-   - `_Shared/Scenes/DevArena.unity` with blast zones, platforms, spawn points
-
-3. **Prefab**
-   - `_FighterBase/Prefabs/ExampleFighter.prefab`
+### Still Created by Students
+- Fighter1 and Fighter2 scripts, prefabs, art, animations, and AttackData
+- Additional AttackData (Up, Down, Aerial) for ExampleFighter if desired
+- UI Canvas with HealthBarUI, RoundDisplayUI, MatchUI
+- Additional arena platforms
 
 ---
 
@@ -347,6 +351,7 @@ rb.linearVelocity = new Vector2(horizontalSpeed, rb.linearVelocity.y);
 4. **Scaffold Pattern**: TODOs in C# reference old guide names ("Lesson 02/03") — see mapping table above
 5. **Team Philosophy**: No prescribed roles. Teams self-organize. Fighter1/ and Fighter2/ are organizational convention, not team assignments.
 6. **Game Rules**: Template defaults are starting points. Teams customize via DESIGN_DOC.md.
+7. **Session 1 Flow**: Tech lead does scene setup (01_SceneSetup.md) while team does design (DESIGN_DOC.md). Dev lead commits, pushes, and invites team after smoke test passes.
 
 ---
 

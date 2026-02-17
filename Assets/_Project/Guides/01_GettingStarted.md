@@ -109,9 +109,10 @@ Here are some things to discuss. These are suggestions, not requirements — org
 
 ## Guide Index
 
-1. **You are here** — Getting Started
-2. [Match Flow and Arena](02_MatchFlowAndArena.md) — How the match system and arena work
-3. [UI System](03_UISystem.md) — How UI connects to game events
-4. [Fighter Architecture](04_FighterArchitecture.md) — Extending FighterBase, movement options, attacks
-5. [Combat System](05_CombatSystem.md) — Hitboxes, hurtboxes, attack data, knockback
-6. [Art Reference](06_ArtReference.md) — Prefab setup, animator controllers, sprites
+1. [Scene Setup](01_SceneSetup.md) — Tech lead builds the DevArena scene (do this first)
+2. **You are here** — Getting Started
+3. [Match Flow and Arena](02_MatchFlowAndArena.md) — How the match system and arena work
+4. [UI System](03_UISystem.md) — How UI connects to game events
+5. [Fighter Architecture](04_FighterArchitecture.md) — Extending FighterBase, movement options, attacks
+6. [Combat System](05_CombatSystem.md) — Hitboxes, hurtboxes, attack data, knockback
+7. [Art Reference](06_ArtReference.md) — Prefab setup, animator controllers, sprites
