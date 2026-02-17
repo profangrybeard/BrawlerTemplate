@@ -354,7 +354,7 @@ DevArena
 |---------|-----|
 | Fighter falls through ground | Ground's **Layer** isn't set to `Ground`, or MovementConfig's **Ground Layer** doesn't include it. Also check the ground has a non-trigger BoxCollider2D. |
 | Fighter doesn't jump | **Ground Check Point** not wired in FighterMovement, or GroundCheck child is positioned wrong (should be at the feet). |
-| No movement at all | **Input Actions** field is empty on PlayerInputHandler. Drag in `BrawlerInputActions`. |
+| No movement at all | Check that GameManager has both fighters assigned in its **Fighters** array — `StartMatch()` initializes movement and attacks. Also check **Input Actions** field is set on PlayerInputHandler. |
 | P2 doesn't respond | Player Index on PlayerInputHandler is still `0`. Set it to `1`. |
 | Attacks don't hit | Both fighters need a Hurtbox child with a trigger collider. Check it exists and **Is Trigger** is on. |
 | No hitstop on hit | HitstopManager isn't in the scene. Add it (Step 7). |

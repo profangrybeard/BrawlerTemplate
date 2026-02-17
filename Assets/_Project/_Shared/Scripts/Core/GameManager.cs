@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Brawler.Fighter;
 using Brawler.Arena;
+using Brawler.Input;
 
 namespace Brawler.Core
 {
@@ -83,6 +84,16 @@ namespace Brawler.Core
             {
                 Debug.LogError("[GameManager] MatchConfig not assigned!");
                 return;
+            }
+
+            // Initialize fighters with their input handlers
+            for (int i = 0; i < fighters.Length; i++)
+            {
+                if (fighters[i] != null)
+                {
+                    var inputHandler = fighters[i].GetComponent<PlayerInputHandler>();
+                    fighters[i].Initialize(i, inputHandler);
+                }
             }
 
             CurrentRound = 0;
