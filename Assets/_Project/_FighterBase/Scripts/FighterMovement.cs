@@ -1,6 +1,7 @@
 using UnityEngine;
 using Brawler.Input;
 using Brawler.Combat;
+using Brawler.Core;
 
 namespace Brawler.Fighter
 {
@@ -63,6 +64,13 @@ namespace Brawler.Fighter
 
             // Don't process movement during hitstun
             if (knockback != null && knockback.IsInHitstun)
+            {
+                return;
+            }
+
+            // Don't process movement during countdown or between rounds
+            var gm = GameManager.Instance;
+            if (gm != null && gm.CurrentState != GameState.Fighting && gm.CurrentState != GameState.Waiting)
             {
                 return;
             }

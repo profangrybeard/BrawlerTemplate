@@ -99,8 +99,8 @@ namespace Brawler.Combat
             var hurtbox = other.GetComponent<Hurtbox>();
             if (hurtbox == null) return;
 
-            // Don't hit self
-            if (hurtbox.Owner == Owner) return;
+            // Don't hit self or unowned hurtboxes
+            if (hurtbox.Owner == null || hurtbox.Owner == Owner) return;
 
             // Don't hit the same fighter twice with one attack
             int targetId = hurtbox.Owner.GetInstanceID();

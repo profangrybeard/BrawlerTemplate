@@ -59,6 +59,9 @@ namespace Brawler.Input
         /// </summary>
         public void Initialize(int index)
         {
+            // Clean up previous actions if re-initializing after Awake
+            DisableInputActions();
+
             playerIndex = index;
             SetupInputActions();
             EnableInputActions();

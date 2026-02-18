@@ -92,6 +92,10 @@ namespace Brawler.Core
                 if (fighters[i] != null)
                 {
                     var inputHandler = fighters[i].GetComponent<PlayerInputHandler>();
+                    if (inputHandler != null)
+                    {
+                        inputHandler.Initialize(i);
+                    }
                     fighters[i].Initialize(i, inputHandler);
                 }
             }

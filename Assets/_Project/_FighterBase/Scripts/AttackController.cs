@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using Brawler.Input;
 using Brawler.Combat;
+using Brawler.Core;
 
 namespace Brawler.Fighter
 {
@@ -104,6 +105,11 @@ namespace Brawler.Fighter
         {
             if (input == null || fighter == null) return;
             if (!fighter.CanAct) return;
+
+            // Don't process attacks during countdown or between rounds
+            var gm = GameManager.Instance;
+            if (gm != null && gm.CurrentState != GameState.Fighting && gm.CurrentState != GameState.Waiting)
+                return;
 
             // Check for attack input
             if (input.AttackBuffered && !IsAttacking)
