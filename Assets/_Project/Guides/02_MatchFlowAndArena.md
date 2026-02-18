@@ -373,7 +373,7 @@ Run through this checklist:
 
 | Problem | Fix |
 |---------|-----|
-| Fighters don't move at all | Make sure GameManager has both fighters assigned in the Inspector. `StartMatch()` initializes fighters — if they're not assigned, initialization is skipped. |
+| Fighters don't move at all | Make sure GameManager has both fighters in the **Fighters** array (P1 at index 0, P2 at index 1) and **MatchConfig** is assigned. `StartMatch()` aborts before initializing fighters if MatchConfig is missing. |
 | KO doesn't trigger round end | Step 1 not done — event subscription is still commented out. |
 | Fighters don't respawn between rounds | Step 2 not done — positioning loop is still commented out. |
 | No countdown, fighting starts instantly | Step 3 not done — countdown coroutine is still commented out. |

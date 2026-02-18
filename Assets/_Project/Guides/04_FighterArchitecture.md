@@ -110,9 +110,15 @@ Add the `FighterMovement` component to your prefab and assign a `MovementConfig`
 Copy `FighterMovement.cs` from `_FighterBase/Scripts/` into your fighter's folder. Modify the copy however you want. This is good if you want the default as a starting point but need custom behavior.
 
 ### Bring Your Platformer Code
-If you built movement code in the Platformer project, you can bring it in. Just make sure it respects `CanAct` — don't allow movement during hitstun or knockback:
+If you built movement code in the Platformer project, you can bring it in. Just make sure it respects `CanAct` and the current game state — don't allow movement during hitstun, knockback, countdowns, or between rounds:
 
 ```csharp
+// Check game state first
+var gm = GameManager.Instance;
+if (gm != null && gm.CurrentState != GameState.Fighting && gm.CurrentState != GameState.Waiting)
+    return;
+
+// Then check fighter state
 if (fighter.CanAct)
 {
     // Your movement code here
@@ -152,7 +158,7 @@ Your fighter prefab needs these components on the root GameObject:
 - **Your Fighter Script** — extends FighterBase
 - **FighterHealth** — auto-added via RequireComponent
 - **KnockbackHandler** — auto-added via RequireComponent
-- **PlayerInputHandler** — for receiving input
+- **PlayerInputHandler** — for receiving input (player index is set automatically by GameManager)
 
 ### Recommended
 - **FighterMovement** — default movement (or your own)
@@ -177,7 +183,7 @@ MyFighter (root)
 - [ ] Rigidbody2D: Freeze Rotation Z = true
 - [ ] Rigidbody2D: Collision Detection = Continuous
 - [ ] Fighter script attached (extends FighterBase)
-- [ ] PlayerInputHandler with InputActions asset assigned
+- [ ] PlayerInputHandler with InputActions asset assigned (player index is set by GameManager — don't set it manually)
 - [ ] MovementConfig assigned (if using FighterMovement)
 - [ ] GroundCheck child positioned at feet
 - [ ] Hurtbox collider is set as trigger

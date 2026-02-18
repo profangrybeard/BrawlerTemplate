@@ -211,7 +211,7 @@ This is the biggest step. You're building a working fighter from components.
    - **Player Input Handler** (namespace: Brawler.Input)
      - Input Actions: drag in `BrawlerInputActions` from `Assets/_Project/_Shared/`
      - Config: drag in `DefaultInputConfig`
-     - Player Index: `0` (you'll change this per instance)
+     - (Leave Player Index at `0` — GameManager sets this automatically based on the Fighters array order)
    - **Fighter Movement** (namespace: Brawler.Fighter)
      - Config: drag in `DefaultMovementConfig`
    - **Attack Controller** (namespace: Brawler.Fighter)
@@ -260,15 +260,13 @@ You need two instances — one per player.
 1. Drag the `ExampleFighter` prefab from `_FighterBase/Prefabs/` into the scene
 2. Rename it `ExampleFighter_P1`
 3. Set Position to `(-3, -2, 0)` (same as SpawnPoint_P1)
-4. In the **Example Fighter** component: Player Index = `0`, Fighter Color = pick a color (blue, etc.)
-5. In the **Player Input Handler**: Player Index = `0`
+4. In the **Example Fighter** component: Fighter Color = pick a color (blue, etc.)
 
-6. Drag the prefab again, rename it `ExampleFighter_P2`
-7. Set Position to `(3, -2, 0)`
-8. In **Example Fighter**: Player Index = `1`, Fighter Color = a different color (red, etc.)
-9. In **Player Input Handler**: Player Index = `1`
+5. Drag the prefab again, rename it `ExampleFighter_P2`
+6. Set Position to `(3, -2, 0)`
+7. In **Example Fighter**: Fighter Color = a different color (red, etc.)
 
-> **Important:** Both players must have different Player Index values. P1 = 0 gets the WASD/Gamepad1 controls. P2 = 1 gets Arrows/Gamepad2 controls.
+> **Important:** You don't need to set Player Index on each fighter manually. The GameManager's **Fighters** array controls this — Element 0 = Player 1 (WASD/Gamepad1), Element 1 = Player 2 (Arrows/Gamepad2). The index is assigned automatically when the match starts.
 
 ---
 
@@ -287,7 +285,9 @@ You need two instances — one per player.
      - Element 0: drag `ExampleFighter_P1`
      - Element 1: drag `ExampleFighter_P2`
 
-> The GameManager is a scaffold — match flow (rounds, KOs, win conditions) won't work until the team wires the TODO steps in Guide 02. But having it in the scene now means it's ready for that work.
+> **Critical:** All three fields must be assigned. `StartMatch()` initializes fighters with their input and movement systems — if MatchConfig or Fighters are missing, nothing works. The Fighters array order determines player index: Element 0 = Player 1, Element 1 = Player 2.
+>
+> Match flow (rounds, KOs, win conditions) won't work until the team wires the TODO steps in Guide 02. But movement, attacks, and combat work immediately.
 
 ### HitstopManager
 
@@ -355,10 +355,10 @@ DevArena
 | Fighter falls through ground | Ground's **Layer** isn't set to `Ground`, or MovementConfig's **Ground Layer** doesn't include it. Also check the ground has a non-trigger BoxCollider2D. |
 | Fighter doesn't jump | **Ground Check Point** not wired in FighterMovement, or GroundCheck child is positioned wrong (should be at the feet). |
 | No movement at all | Check that GameManager has both fighters assigned in its **Fighters** array — `StartMatch()` initializes movement and attacks. Also check **Input Actions** field is set on PlayerInputHandler. |
-| P2 doesn't respond | Player Index on PlayerInputHandler is still `0`. Set it to `1`. |
+| P2 doesn't respond | Check the **Fighters** array on GameManager — P1 must be index 0, P2 index 1. The GameManager sets each fighter's player index automatically at match start based on array position. |
 | Attacks don't hit | Both fighters need a Hurtbox child with a trigger collider. Check it exists and **Is Trigger** is on. |
 | No hitstop on hit | HitstopManager isn't in the scene. Add it (Step 7). |
-| Console says "MatchConfig not assigned" | Wire DefaultMatchConfig on the GameManager. Not critical for this test — movement and combat work without it. |
+| Console says "MatchConfig not assigned" | Wire **DefaultMatchConfig** on the GameManager. This is **critical** — `StartMatch()` aborts before initializing fighters if MatchConfig is missing, so nothing will move. |
 
 ---
 
