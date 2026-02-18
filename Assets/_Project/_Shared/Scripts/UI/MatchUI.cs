@@ -26,8 +26,10 @@ namespace Brawler.UI
         [SerializeField] private TextMeshProUGUI timerText;
 
         [Header("Animation Settings")]
+        #pragma warning disable CS0414 // Used by TODO coroutines when students wire UI
         [SerializeField] private float countdownDelay = 1f;
         [SerializeField] private float announcementDuration = 1.5f;
+        #pragma warning restore CS0414
 
         [Header("Winner Panel")]
         [Tooltip("Panel shown when match ends.")]

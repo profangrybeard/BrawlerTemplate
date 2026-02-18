@@ -21,7 +21,9 @@ namespace Brawler.Arena
     {
         [Header("Settings")]
         [Tooltip("How long to disable collision when dropping through.")]
+        #pragma warning disable CS0414 // Used by TODO coroutine when students wire drop-through
         [SerializeField] private float dropThroughDuration = 0.25f;
+        #pragma warning restore CS0414
 
         [Header("Debug")]
         [SerializeField] private bool logDropThrough = false;

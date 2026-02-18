@@ -66,6 +66,13 @@ namespace Brawler.Input
 
         private void Awake()
         {
+            // Clone the asset so each player gets independent action state.
+            // Without this, two handlers sharing the same asset conflict on Enable.
+            if (inputActions != null)
+            {
+                inputActions = Instantiate(inputActions);
+            }
+
             // If not initialized externally, set up with serialized values
             if (moveAction == null)
             {
@@ -76,6 +83,12 @@ namespace Brawler.Input
         private void OnDestroy()
         {
             CleanupInputActions();
+
+            // Destroy the cloned asset
+            if (inputActions != null)
+            {
+                Destroy(inputActions);
+            }
         }
 
         private void OnEnable()
