@@ -211,7 +211,7 @@ This is the biggest step. You're building a working fighter from components.
    - **Player Input Handler** (namespace: Brawler.Input)
      - Input Actions: drag in `BrawlerInputActions` from `Assets/_Project/_Shared/`
      - Config: drag in `DefaultInputConfig`
-     - (Leave Player Index at `0` — GameManager sets this automatically based on the Fighters array order)
+     - Player Index: `0` (this is the default — correct for Player 1)
    - **Fighter Movement** (namespace: Brawler.Fighter)
      - Config: drag in `DefaultMovementConfig`
    - **Attack Controller** (namespace: Brawler.Fighter)
@@ -261,12 +261,14 @@ You need two instances — one per player.
 2. Rename it `ExampleFighter_P1`
 3. Set Position to `(-3, -2, 0)` (same as SpawnPoint_P1)
 4. In the **Example Fighter** component: Fighter Color = pick a color (blue, etc.)
+5. Verify **Player Input Handler** > **Player Index** = `0` (should be default)
 
-5. Drag the prefab again, rename it `ExampleFighter_P2`
-6. Set Position to `(3, -2, 0)`
-7. In **Example Fighter**: Fighter Color = a different color (red, etc.)
+6. Drag the prefab again, rename it `ExampleFighter_P2`
+7. Set Position to `(3, -2, 0)`
+8. In **Example Fighter**: Fighter Color = a different color (red, etc.)
+9. **Set Player Input Handler > Player Index = `1`** — this is what makes P2 use arrow keys/numpad instead of WASD
 
-> **Important:** You don't need to set Player Index on each fighter manually. The GameManager's **Fighters** array controls this — Element 0 = Player 1 (WASD/Gamepad1), Element 1 = Player 2 (Arrows/Gamepad2). The index is assigned automatically when the match starts.
+> **Critical — Player Index:** Each fighter's **PlayerInputHandler** must have the correct **Player Index** set in the Inspector: `0` for Player 1 (WASD + Space + J/K), `1` for Player 2 (Arrows + RCtrl + Numpad). If both are left at `0`, both fighters will respond to WASD and Player 2 won't have controls. The system will auto-detect this mistake and fix it at runtime, but setting it correctly in the Inspector is the reliable way.
 
 ---
 
@@ -285,7 +287,12 @@ You need two instances — one per player.
      - Element 0: drag `ExampleFighter_P1`
      - Element 1: drag `ExampleFighter_P2`
 
-> **Critical:** All three fields must be assigned. `StartMatch()` initializes fighters with their input and movement systems — if MatchConfig or Fighters are missing, nothing works. The Fighters array order determines player index: Element 0 = Player 1, Element 1 = Player 2.
+> **Critical — all three fields must be assigned:**
+> - **MatchConfig**: Without this, `StartMatch()` aborts immediately and fighters won't initialize. You'll see a red error in Console.
+> - **Fighters array**: Element 0 = Player 1, Element 1 = Player 2. This must match each fighter's **Player Index** in their PlayerInputHandler (P1 = 0, P2 = 1).
+> - **Spawn Points**: Element 0 = P1 spawn, Element 1 = P2 spawn.
+>
+> If anything is missing, the Console will tell you exactly what to fix with a red or yellow message.
 >
 > Match flow (rounds, KOs, win conditions) won't work until the team wires the TODO steps in Guide 02. But movement, attacks, and combat work immediately.
 
@@ -355,7 +362,7 @@ DevArena
 | Fighter falls through ground | Ground's **Layer** isn't set to `Ground`, or MovementConfig's **Ground Layer** doesn't include it. Also check the ground has a non-trigger BoxCollider2D. |
 | Fighter doesn't jump | **Ground Check Point** not wired in FighterMovement, or GroundCheck child is positioned wrong (should be at the feet). |
 | No movement at all | Check that GameManager has both fighters assigned in its **Fighters** array — `StartMatch()` initializes movement and attacks. Also check **Input Actions** field is set on PlayerInputHandler. |
-| P2 doesn't respond | Check the **Fighters** array on GameManager — P1 must be index 0, P2 index 1. The GameManager sets each fighter's player index automatically at match start based on array position. |
+| P2 doesn't respond | **Most common fix:** Select your P2 fighter and set **Player Input Handler > Player Index = `1`**. Also check: (1) GameManager's **Fighters** array has P1 at Element 0 and P2 at Element 1, (2) GameManager has **MatchConfig** assigned, (3) both fighters have **BrawlerInputActions** in their Input Actions field. Check the Console for yellow/red messages — they tell you exactly what's wrong. |
 | Attacks don't hit | Both fighters need a Hurtbox child with a trigger collider. Check it exists and **Is Trigger** is on. |
 | No hitstop on hit | HitstopManager isn't in the scene. Add it (Step 7). |
 | Console says "MatchConfig not assigned" | Wire **DefaultMatchConfig** on the GameManager. This is **critical** — `StartMatch()` aborts before initializing fighters if MatchConfig is missing, so nothing will move. |

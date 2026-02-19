@@ -1,6 +1,6 @@
 # Brawler Template - Claude Context Document
 
-> **Last Updated**: 2026-02-17
+> **Last Updated**: 2026-02-19
 > **Purpose**: Context restoration for Claude Code sessions
 > **Project**: SCAD Applied Programming - Brawler Template
 
@@ -196,7 +196,19 @@ public class AttackData : ScriptableObject
 
 ---
 
-## Input Bindings
+## Input System
+
+The input system uses two separate action maps (`Player1` and `Player2`) inside a single `BrawlerInputActions` InputActionAsset. Each fighter's `PlayerInputHandler` selects which map to use based on its `playerIndex` field.
+
+**Critical setup:** Each fighter must have the correct **Player Index** set on its `PlayerInputHandler`:
+- Player 1 = `0` → uses `Player1` action map (WASD, Space, J, K, LShift)
+- Player 2 = `1` → uses `Player2` action map (Arrows, RCtrl, Numpad 0/1/2/3)
+
+If both fighters have `playerIndex = 0`, both respond to WASD and P2 has no controls. The system auto-detects this and fixes it at runtime, but the Inspector value should be set correctly.
+
+**Initialization:** `GameManager.StartMatch()` calls `PlayerInputHandler.Initialize(i)` for each fighter in its `Fighters[]` array. If GameManager isn't wired correctly, `PlayerInputHandler.Start()` self-initializes using the Inspector `playerIndex` as a fallback.
+
+### Bindings
 
 **Player 1 (Keyboard)**
 - Move: WASD

@@ -11,12 +11,14 @@ namespace Brawler.Input
     ///   - Player 0: WASD + Space/J/K or Gamepad 1
     ///   - Player 1: Arrows + RCtrl/Numpad1/2 or Gamepad 2
     ///
-    /// The InputActionAsset should have separate control schemes for each player.
+    /// Setup: Set Player Index in the Inspector (0 for P1, 1 for P2).
+    /// GameManager also calls Initialize() at match start, but the Inspector
+    /// value works as a standalone fallback if GameManager isn't wired yet.
     /// </summary>
     public class PlayerInputHandler : MonoBehaviour
     {
         [Header("Player Settings")]
-        [Tooltip("Which player this handler is for (0 = Player 1, 1 = Player 2)")]
+        [Tooltip("Which player this handler is for (0 = Player 1, 1 = Player 2). SET THIS ON EACH FIGHTER.")]
         [SerializeField] private int playerIndex = 0;
 
         [Header("Input Asset")]
@@ -53,18 +55,28 @@ namespace Brawler.Input
         // Raw input for debugging
         private Vector2 rawMoveInput;
 
+        // Tracks whether Initialize() or self-init has completed
+        private bool isInitialized;
+
         /// <summary>
         /// Initialize the input handler for a specific player.
-        /// Call this after instantiating the fighter prefab.
+        /// Called by GameManager at match start.
         /// </summary>
         public void Initialize(int index)
         {
-            // Clean up previous actions if re-initializing after Awake
-            DisableInputActions();
+            // Clean up previous actions if re-initializing
+            if (isInitialized)
+            {
+                DisableInputActions();
+            }
 
             playerIndex = index;
             SetupInputActions();
             EnableInputActions();
+            isInitialized = true;
+
+            string mapName = playerIndex == 0 ? "Player1" : "Player2";
+            Debug.Log($"[PlayerInputHandler] '{gameObject.name}' initialized as Player {playerIndex + 1} (map: {mapName})", this);
         }
 
         private void Awake()
@@ -75,11 +87,52 @@ namespace Brawler.Input
             {
                 inputActions = Instantiate(inputActions);
             }
-
-            // If not initialized externally, set up with serialized values
-            if (moveAction == null)
+            else
             {
-                SetupInputActions();
+                Debug.LogError($"[PlayerInputHandler] '{gameObject.name}' has no InputActionAsset assigned! " +
+                    "Drag 'BrawlerInputActions' into the Input Actions field.", this);
+            }
+        }
+
+        private void Start()
+        {
+            // If GameManager already called Initialize(), nothing to do
+            if (isInitialized) return;
+
+            // GameManager didn't initialize us — self-initialize using Inspector values.
+            // First, check for the most common student mistake: two handlers with the same index.
+            AutoFixDuplicatePlayerIndex();
+
+            SetupInputActions();
+            EnableInputActions();
+            isInitialized = true;
+
+            string mapName = playerIndex == 0 ? "Player1" : "Player2";
+            Debug.LogWarning($"[PlayerInputHandler] '{gameObject.name}' was NOT initialized by GameManager. " +
+                $"Self-initialized as Player {playerIndex + 1} (map: {mapName}). " +
+                "Ensure GameManager has MatchConfig and both fighters assigned in its Fighters array.", this);
+        }
+
+        /// <summary>
+        /// If two handlers exist with the same playerIndex, auto-assign them as 0 and 1.
+        /// This catches the most common student mistake: leaving both at default (0).
+        /// </summary>
+        private void AutoFixDuplicatePlayerIndex()
+        {
+            var allHandlers = FindObjectsByType<PlayerInputHandler>(FindObjectsSortMode.InstanceID);
+            if (allHandlers.Length != 2) return;
+
+            // Only fix if both have the same index AND neither has been initialized yet
+            if (allHandlers[0].playerIndex == allHandlers[1].playerIndex &&
+                !allHandlers[0].isInitialized && !allHandlers[1].isInitialized)
+            {
+                allHandlers[0].playerIndex = 0;
+                allHandlers[1].playerIndex = 1;
+                Debug.LogWarning($"[PlayerInputHandler] Both fighters had Player Index = {playerIndex}. " +
+                    $"Auto-assigned: '{allHandlers[0].gameObject.name}' -> Player 1, " +
+                    $"'{allHandlers[1].gameObject.name}' -> Player 2. " +
+                    "To control this yourself, set Player Index on each fighter's PlayerInputHandler (0 or 1).",
+                    this);
             }
         }
 
@@ -96,7 +149,9 @@ namespace Brawler.Input
 
         private void OnEnable()
         {
-            if (moveAction != null)
+            // Only re-enable if we were previously initialized
+            // (prevents premature enable during the Awake->OnEnable->Start sequence)
+            if (isInitialized && moveAction != null)
             {
                 EnableInputActions();
             }
@@ -104,7 +159,10 @@ namespace Brawler.Input
 
         private void OnDisable()
         {
-            DisableInputActions();
+            if (isInitialized)
+            {
+                DisableInputActions();
+            }
         }
 
         private void Update()
@@ -117,7 +175,8 @@ namespace Brawler.Input
         {
             if (inputActions == null)
             {
-                Debug.LogError($"[PlayerInputHandler P{playerIndex}] InputActionAsset not assigned!", this);
+                Debug.LogError($"[PlayerInputHandler] '{gameObject.name}' (P{playerIndex + 1}) " +
+                    "InputActionAsset not assigned! Drag 'BrawlerInputActions' into the Input Actions field.", this);
                 return;
             }
 
@@ -131,7 +190,8 @@ namespace Brawler.Input
                 playerMap = inputActions.FindActionMap("Player");
                 if (playerMap == null)
                 {
-                    Debug.LogError($"[PlayerInputHandler P{playerIndex}] No '{mapName}' or 'Player' action map found!", this);
+                    Debug.LogError($"[PlayerInputHandler] '{gameObject.name}' (P{playerIndex + 1}) " +
+                        $"No '{mapName}' or 'Player' action map found in the InputActionAsset!", this);
                     return;
                 }
             }
@@ -143,11 +203,11 @@ namespace Brawler.Input
             specialAction = playerMap.FindAction("Special");
 
             if (moveAction == null)
-                Debug.LogError($"[PlayerInputHandler P{playerIndex}] 'Move' action not found!", this);
+                Debug.LogError($"[PlayerInputHandler] '{gameObject.name}' (P{playerIndex + 1}) 'Move' action not found!", this);
             if (jumpAction == null)
-                Debug.LogError($"[PlayerInputHandler P{playerIndex}] 'Jump' action not found!", this);
+                Debug.LogError($"[PlayerInputHandler] '{gameObject.name}' (P{playerIndex + 1}) 'Jump' action not found!", this);
             if (attackAction == null)
-                Debug.LogWarning($"[PlayerInputHandler P{playerIndex}] 'Attack' action not found. Add it for combat.", this);
+                Debug.LogWarning($"[PlayerInputHandler] '{gameObject.name}' (P{playerIndex + 1}) 'Attack' action not found. Add it for combat.", this);
         }
 
         private void EnableInputActions()

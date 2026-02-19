@@ -57,11 +57,59 @@ namespace Brawler.Core
             // TODO STEP 1: Subscribe to GameEvents.OnFighterKO
             // GameEvents.OnFighterKO += OnFighterKO;
 
-            // Auto-start match if fighters are assigned
-            if (fighters != null && fighters.Length >= 2 && fighters[0] != null && fighters[1] != null)
+            // Validate required references before auto-starting
+            if (!ValidateReferences()) return;
+
+            StartMatch();
+        }
+
+        /// <summary>
+        /// Check that all required Inspector references are assigned.
+        /// Logs specific, actionable errors for each missing reference.
+        /// </summary>
+        private bool ValidateReferences()
+        {
+            bool valid = true;
+
+            if (matchConfig == null)
             {
-                StartMatch();
+                Debug.LogError("[GameManager] MatchConfig not assigned! " +
+                    "Create one: Right-click in Project > Create > Brawler > Match Config, " +
+                    "then drag it into the GameManager's Match Config field.", this);
+                valid = false;
             }
+
+            if (fighters == null || fighters.Length < 2)
+            {
+                Debug.LogError("[GameManager] Fighters array needs 2 entries! " +
+                    "Set Fighters array size to 2, then drag your P1 fighter into Element 0 " +
+                    "and P2 fighter into Element 1.", this);
+                valid = false;
+            }
+            else
+            {
+                if (fighters[0] == null)
+                {
+                    Debug.LogError("[GameManager] Fighters Element 0 (Player 1) is empty! " +
+                        "Drag your P1 fighter from the Hierarchy into the Fighters array Element 0.", this);
+                    valid = false;
+                }
+                if (fighters.Length < 2 || fighters[1] == null)
+                {
+                    Debug.LogError("[GameManager] Fighters Element 1 (Player 2) is empty! " +
+                        "Drag your P2 fighter from the Hierarchy into the Fighters array Element 1.", this);
+                    valid = false;
+                }
+            }
+
+            if (spawnPoints == null || spawnPoints.Length < 2 || spawnPoints[0] == null || spawnPoints[1] == null)
+            {
+                Debug.LogWarning("[GameManager] Spawn Points array is incomplete. " +
+                    "Set size to 2 and assign SpawnPoint_P1 (Element 0) and SpawnPoint_P2 (Element 1). " +
+                    "Fighters will still work but won't respawn at correct positions.", this);
+            }
+
+            return valid;
         }
 
         private void OnDestroy()
@@ -82,7 +130,8 @@ namespace Brawler.Core
         {
             if (matchConfig == null)
             {
-                Debug.LogError("[GameManager] MatchConfig not assigned!");
+                Debug.LogError("[GameManager] MatchConfig not assigned! StartMatch() aborted — " +
+                    "fighters will not be initialized. Create a MatchConfig asset and assign it.", this);
                 return;
             }
 
@@ -96,7 +145,13 @@ namespace Brawler.Core
                     {
                         inputHandler.Initialize(i);
                     }
+                    else
+                    {
+                        Debug.LogError($"[GameManager] Fighter '{fighters[i].gameObject.name}' (Element {i}) " +
+                            "has no PlayerInputHandler component! Add one and assign BrawlerInputActions.", this);
+                    }
                     fighters[i].Initialize(i, inputHandler);
+                    Log($"Fighter '{fighters[i].FighterName}' ({fighters[i].gameObject.name}) initialized as Player {i + 1}");
                 }
             }
 
