@@ -2,7 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(tree:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git -C \"C:\\\\SCAD\\\\Projects\\\\BrawlerTemplate\" log --oneline -30)",
+      "Bash(git -C \"C:\\\\SCAD\\\\Projects\\\\BrawlerTemplate\" log --stat --oneline -10)",
+      "Bash(git -C \"C:\\\\SCAD\\\\Projects\\\\BrawlerTemplate\" diff 2ae1cb0..5539afd --stat)",
+      "Bash(git -C \"C:\\\\SCAD\\\\Projects\\\\BrawlerTemplate\" log -1 --format=\"%B\" 5539afd)",
+      "Bash(git -C \"C:\\\\SCAD\\\\Projects\\\\BrawlerTemplate\" log -1 --format=\"%B\" 2ae1cb0)",
+      "Bash(git -C \"C:\\\\SCAD\\\\Projects\\\\BrawlerTemplate\" log -1 --format=\"%B\" 9f14d66)",
+      "Bash(git -C \"C:\\\\SCAD\\\\Projects\\\\BrawlerTemplate\" log -1 --format=\"%B\" 406c073)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nBulletproof P2 input: self-healing init, auto-fix, guide corrections\n\nPlayerInputHandler no longer pre-initializes in Awake\\(\\) with wrong\nplayerIndex. Three layers of protection ensure P2 always works:\n1. Start\\(\\) self-initializes from Inspector playerIndex if GameManager\n   didn''t call Initialize\\(\\) \\(missing MatchConfig, fighters, etc.\\)\n2. AutoFixDuplicatePlayerIndex\\(\\) detects two handlers with same index\n   and auto-assigns 0/1 with a console warning\n3. Guide now instructs students to set Player Index = 1 on P2\n\nGameManager validates all references on Start\\(\\) with specific,\nactionable error messages for each missing field. All error/warning\nlogs include the GameObject name and tell students exactly what to fix.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)"
     ]
   }
 }
